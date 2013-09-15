@@ -1,0 +1,21 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+#set( $prefix=$className.toLowerCase())
+<div id="${prefix}List">
+
+    <h2>Liste des ${prefix}s</h2>
+
+    <ul>
+        <li ng-repeat="${prefix} in ${prefix}s">
+            <a href="${symbol_pound}/${prefix}/{{${prefix}.id}}"><span class="${prefix}Title">{{${prefix}.title}}</span></a> :
+            <span class="${prefix}Description">{{${prefix}.description | filter:ellipsis:20}}</span> &nbsp;
+            <button class="button" ng-click="delete${className}(${prefix})">X</button>
+        </li>
+    </ul>
+
+    <hr/>
+
+    <button ng-click="goto${className}NewPage()" class="button">Ajouter</button>
+
+</div>
