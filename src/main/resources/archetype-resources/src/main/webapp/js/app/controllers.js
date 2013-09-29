@@ -5,7 +5,7 @@
 function ${className}ListController($scope, $location, ${className}) {
     $scope.${prefix}s = ${className}.query();
     $scope.goto${className}NewPage = function () {
-    	${symbol_dollar}location.path("/${prefix}/new")
+    	${symbol_dollar}location.path("/${prefix}/new");
     };
     $scope.delete${className} = function (${prefix}) {
         ${prefix}.$delete({'id':${prefix}.id}, function () {
@@ -18,7 +18,7 @@ function ${className}DetailController($scope, $routeParams, $location, ${classNa
     $scope.${prefix} = ${className}.get({id:$routeParams.id}, function (${prefix}) {
     });
     $scope.goto${className}ListPage = function () {
-        $location.path("/")
+        $location.path("/");
     };
 }
 
@@ -29,6 +29,6 @@ function ${className}NewController($scope, $location, ${className}) {
         });
     };
     $scope.gotoTodoListPage = function () {
-        $location.path("/")
+        $location.path("/");
     };
 }
